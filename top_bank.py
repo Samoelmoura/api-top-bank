@@ -4,18 +4,18 @@ import numpy as np
 
 class Top_bank(object):
     def __init__(self):
-        self.cols_filtering = pickle.load(open('features/cols_filtering.pkl', 'rb'))
-        self.ss_balance = pickle.load(open('features/ss_balance.pkl', 'rb'))
-        self.mm_credit_score = pickle.load(open('features/mm_credit_score.pkl', 'rb'))
-        self.mm_estimatedsalary = pickle.load(open('features/mm_estimatedsalary.pkl', 'rb'))
-        self.map_geography = pickle.load(open('features/map_geography.pkl', 'rb'))
-        self.map_gender = pickle.load(open('features/map_gender.pkl', 'rb'))
-        self.map_numofproducts = pickle.load(open('features/map_numofproducts.pkl', 'rb'))
-        self.tenure_cicle = pickle.load(open('features/tenure_cicle.pkl', 'rb'))
-        self.cols_drop = pickle.load(open('features/cols_drop.pkl', 'rb'))
-        self.cols_drop_split = pickle.load(open('features/cols_drop_split.pkl', 'rb'))
-        self.map_test_id_salary = pickle.load(open('features/map_test_id_salary.pkl', 'rb'))
-        self.model = pickle.load(open('models/xgb_model.pkl', 'rb'))
+        self.cols_filtering = pickle.load(open('cols_filtering.pkl', 'rb'))
+        self.ss_balance = pickle.load(open('ss_balance.pkl', 'rb'))
+        self.mm_credit_score = pickle.load(open('mm_credit_score.pkl', 'rb'))
+        self.mm_estimatedsalary = pickle.load(open('mm_estimatedsalary.pkl', 'rb'))
+        self.map_geography = pickle.load(open('map_geography.pkl', 'rb'))
+        self.map_gender = pickle.load(open('map_gender.pkl', 'rb'))
+        self.map_numofproducts = pickle.load(open('map_numofproducts.pkl', 'rb'))
+        self.tenure_cicle = pickle.load(open('tenure_cicle.pkl', 'rb'))
+        self.cols_drop = pickle.load(open('cols_drop.pkl', 'rb'))
+        self.cols_drop_split = pickle.load(open('cols_drop_split.pkl', 'rb'))
+        self.map_test_id_salary = pickle.load(open('map_test_id_salary.pkl', 'rb'))
+        self.model = pickle.load(open('xgb_model.pkl', 'rb'))
     
     def data_filtering(self, df):
         df.drop(self.cols_filtering, axis=1, inplace=True)
