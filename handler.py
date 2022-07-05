@@ -1,6 +1,6 @@
 from flask import Flask, request, Response
 import pandas as pd
-from packages.top_bank import Top_bank
+from top_bank import Top_bank
 import os
 
 # initialize API
