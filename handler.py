@@ -40,5 +40,5 @@ def top_bank_predict():
 if __name__ == '__main__':
     # starting flask
     port = os.environ.get('PORT', 5000) # heroku host
-    port = 5000 # local host
+    # port = 5000 # local host
     app.run(host='0.0.0.0', port=port)
